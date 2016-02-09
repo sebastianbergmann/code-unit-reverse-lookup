@@ -15,6 +15,9 @@ namespace SebastianBergmann\CodeUnitReverseLookup;
  */
 class WizardTest extends \PHPUnit_Framework_TestCase
 {
+    /**
+     * @var Wizard
+     */
     private $wizard;
 
     protected function setUp()
