@@ -24,7 +24,7 @@ class Wizard
      * @param string $filename
      * @param int    $lineNumber
      *
-     * @return string|false
+     * @return string
      */
     public function lookup($filename, $lineNumber)
     {
@@ -32,9 +32,9 @@ class Wizard
 
         if (isset($this->lookupTable[$filename][$lineNumber])) {
             return $this->lookupTable[$filename][$lineNumber];
+        } else {
+            return $filename . ':' . $lineNumber;
         }
-
-        return false;
     }
 
     private function initLookupTable()

@@ -33,8 +33,11 @@ class WizardTest extends \PHPUnit_Framework_TestCase
         );
     }
 
-    public function testReturnsFalseForCodeUnit()
+    public function testReturnsFilenameAndLineNumberAsStringWhenNotInCodeUnit()
     {
-        $this->assertFalse($this->wizard->lookup('file.php', 1));
+        $this->assertEquals(
+            'file.php:1',
+            $this->wizard->lookup('file.php', 1)
+        );
     }
 }
