@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project name="code-unit-reverse-lookup">
+<project name="code-unit-reverse-lookup" default="setup">
+    <target name="setup" depends="clean,composer"/>
+
     <target name="clean" description="Cleanup build artifacts">
         <delete dir="${basedir}/vendor"/>
         <delete file="${basedir}/composer.lock"/>
