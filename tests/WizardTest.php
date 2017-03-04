@@ -10,10 +10,12 @@
 
 namespace SebastianBergmann\CodeUnitReverseLookup;
 
+use PHPUnit\Framework\TestCase;
+
 /**
  * @covers SebastianBergmann\CodeUnitReverseLookup\Wizard
  */
-class WizardTest extends \PHPUnit_Framework_TestCase
+class WizardTest extends TestCase
 {
     /**
      * @var Wizard
