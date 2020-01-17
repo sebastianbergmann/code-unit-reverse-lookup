@@ -15,12 +15,8 @@ matrix:
     - php: 7.4
       dist: bionic
 
-before_install:
-  - composer self-update
-  - composer clear-cache
-
 install:
-  - travis_retry composer update --no-interaction --no-ansi --no-progress --no-suggest --optimize-autoloader --prefer-stable
+  - travis_retry ./tools/composer update --no-interaction --no-ansi --no-progress --no-suggest --optimize-autoloader --prefer-stable
 
 script:
   - ./vendor/bin/phpunit --coverage-clover=coverage.xml
