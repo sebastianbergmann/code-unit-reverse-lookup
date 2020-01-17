@@ -1,13 +1,12 @@
 <?php
 /*
- * This file is part of code-unit-reverse-lookup.
+ * This file is part of sebastian/code-unit-reverse-lookup.
  *
  * (c) Sebastian Bergmann <sebastian@phpunit.de>
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-
 namespace SebastianBergmann\CodeUnitReverseLookup;
 
 /**
@@ -44,9 +43,9 @@ class Wizard
 
         if (isset($this->lookupTable[$filename][$lineNumber])) {
             return $this->lookupTable[$filename][$lineNumber];
-        } else {
-            return $filename . ':' . $lineNumber;
         }
+
+        return $filename . ':' . $lineNumber;
     }
 
     private function updateLookupTable()
@@ -57,7 +56,7 @@ class Wizard
 
     private function processClassesAndTraits()
     {
-        foreach (array_merge(get_declared_classes(), get_declared_traits()) as $classOrTrait) {
+        foreach (\array_merge(\get_declared_classes(), \get_declared_traits()) as $classOrTrait) {
             if (isset($this->processedClasses[$classOrTrait])) {
                 continue;
             }
@@ -74,7 +73,7 @@ class Wizard
 
     private function processFunctions()
     {
-        foreach (get_defined_functions()['user'] as $function) {
+        foreach (\get_defined_functions()['user'] as $function) {
             if (isset($this->processedFunctions[$function])) {
                 continue;
             }
@@ -85,9 +84,6 @@ class Wizard
         }
     }
 
-    /**
-     * @param \ReflectionFunctionAbstract $functionOrMethod
-     */
     private function processFunctionOrMethod(\ReflectionFunctionAbstract $functionOrMethod)
     {
         if ($functionOrMethod->isInternal()) {
@@ -104,7 +100,7 @@ class Wizard
             $this->lookupTable[$functionOrMethod->getFileName()] = [];
         }
 
-        foreach (range($functionOrMethod->getStartLine(), $functionOrMethod->getEndLine()) as $line) {
+        foreach (\range($functionOrMethod->getStartLine(), $functionOrMethod->getEndLine()) as $line) {
             $this->lookupTable[$functionOrMethod->getFileName()][$line] = $name;
         }
     }

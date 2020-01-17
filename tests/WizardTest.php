@@ -1,13 +1,12 @@
 <?php
 /*
- * This file is part of code-unit-reverse-lookup.
+ * This file is part of sebastian/code-unit-reverse-lookup.
  *
  * (c) Sebastian Bergmann <sebastian@phpunit.de>
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-
 namespace SebastianBergmann\CodeUnitReverseLookup;
 
 use PHPUnit\Framework\TestCase;
@@ -35,7 +34,7 @@ class WizardTest extends TestCase
             'Foo::method',
             $this->wizard->lookup(
                 __DIR__ . '/_fixture/Foo.php',
-                6
+                12
             )
         );
 
@@ -53,7 +52,7 @@ class WizardTest extends TestCase
             'Bar::method',
             $wizard->lookup(
                 __DIR__ . '/_fixture/Bar.php',
-                6
+                12
             )
         );
     }
