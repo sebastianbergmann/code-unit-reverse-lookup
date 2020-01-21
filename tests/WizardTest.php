@@ -21,12 +21,12 @@ class WizardTest extends TestCase
      */
     private $wizard;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->wizard = new Wizard;
     }
 
-    public function testMethodCanBeLookedUp()
+    public function testMethodCanBeLookedUp(): Wizard
     {
         require __DIR__ . '/_fixture/Foo.php';
 
@@ -44,7 +44,7 @@ class WizardTest extends TestCase
     /**
      * @depends testMethodCanBeLookedUp
      */
-    public function testMethodCanBeLookedUp2(Wizard $wizard)
+    public function testMethodCanBeLookedUp2(Wizard $wizard): void
     {
         require __DIR__ . '/_fixture/Bar.php';
 
@@ -57,7 +57,7 @@ class WizardTest extends TestCase
         );
     }
 
-    public function testReturnsFilenameAndLineNumberAsStringWhenNotInCodeUnit()
+    public function testReturnsFilenameAndLineNumberAsStringWhenNotInCodeUnit(): void
     {
         $this->assertEquals(
             'file.php:1',
