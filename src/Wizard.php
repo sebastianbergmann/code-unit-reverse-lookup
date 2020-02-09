@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 /*
  * This file is part of sebastian/code-unit-reverse-lookup.
  *
@@ -48,13 +48,13 @@ class Wizard
         return $filename . ':' . $lineNumber;
     }
 
-    private function updateLookupTable()
+    private function updateLookupTable(): void
     {
         $this->processClassesAndTraits();
         $this->processFunctions();
     }
 
-    private function processClassesAndTraits()
+    private function processClassesAndTraits(): void
     {
         foreach (\array_merge(\get_declared_classes(), \get_declared_traits()) as $classOrTrait) {
             if (isset($this->processedClasses[$classOrTrait])) {
@@ -71,7 +71,7 @@ class Wizard
         }
     }
 
-    private function processFunctions()
+    private function processFunctions(): void
     {
         foreach (\get_defined_functions()['user'] as $function) {
             if (isset($this->processedFunctions[$function])) {
@@ -84,7 +84,7 @@ class Wizard
         }
     }
 
-    private function processFunctionOrMethod(\ReflectionFunctionAbstract $functionOrMethod)
+    private function processFunctionOrMethod(\ReflectionFunctionAbstract $functionOrMethod): void
     {
         if ($functionOrMethod->isInternal()) {
             return;
