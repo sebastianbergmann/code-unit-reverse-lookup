@@ -56,7 +56,13 @@ class Wizard
 
     private function processClassesAndTraits(): void
     {
-        foreach (\array_merge(\get_declared_classes(), \get_declared_traits()) as $classOrTrait) {
+        $classes = \get_declared_classes();
+        $traits  = \get_declared_traits();
+
+        \assert(\is_array($classes));
+        \assert(\is_array($traits));
+
+        foreach (\array_merge($classes, $traits) as $classOrTrait) {
             if (isset($this->processedClasses[$classOrTrait])) {
                 continue;
             }
