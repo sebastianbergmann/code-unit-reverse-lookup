@@ -9,17 +9,14 @@
  */
 namespace SebastianBergmann\CodeUnitReverseLookup;
 
+use PHPUnit\Framework\Attributes\CoversClass;
+use PHPUnit\Framework\Attributes\Depends;
 use PHPUnit\Framework\TestCase;
 
-/**
- * @covers SebastianBergmann\CodeUnitReverseLookup\Wizard
- */
+#[CoversClass(Wizard::class)]
 class WizardTest extends TestCase
 {
-    /**
-     * @var Wizard
-     */
-    private $wizard;
+    private Wizard $wizard;
 
     protected function setUp(): void
     {
@@ -41,9 +38,7 @@ class WizardTest extends TestCase
         return $this->wizard;
     }
 
-    /**
-     * @depends testMethodCanBeLookedUp
-     */
+    #[Depends('testMethodCanBeLookedUp')]
     public function testMethodCanBeLookedUp2(Wizard $wizard): void
     {
         require __DIR__ . '/_fixture/Bar.php';
