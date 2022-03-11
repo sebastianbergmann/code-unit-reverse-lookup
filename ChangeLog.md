@@ -2,7 +2,7 @@
 
 All notable changes to `sebastianbergmann/code-unit-reverse-lookup` are documented in this file using the [Keep a CHANGELOG](http://keepachangelog.com/) principles.
 
-## [3.0.0] - 2021-MM-DD
+## [3.0.0] - 2022-MM-DD
 
 ### Removed
 
