@@ -14,7 +14,7 @@ use PHPUnit\Framework\Attributes\Depends;
 use PHPUnit\Framework\TestCase;
 
 #[CoversClass(Wizard::class)]
-class WizardTest extends TestCase
+final class WizardTest extends TestCase
 {
     private Wizard $wizard;
 
