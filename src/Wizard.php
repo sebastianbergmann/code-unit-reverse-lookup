@@ -24,19 +24,19 @@ use ReflectionMethod;
 class Wizard
 {
     /**
-     * @var array
+     * @psalm-var array<string,array<int,string>>
      */
-    private $lookupTable = [];
+    private array $lookupTable = [];
 
     /**
-     * @var array
+     * @psalm-var array<class-string,true>
      */
-    private $processedClasses = [];
+    private array $processedClasses = [];
 
     /**
-     * @var array
+     * @psalm-var array<string,true>
      */
-    private $processedFunctions = [];
+    private array $processedFunctions = [];
 
     /**
      * @param string $filename
