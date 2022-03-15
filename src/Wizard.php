@@ -21,9 +21,6 @@ use ReflectionFunction;
 use ReflectionFunctionAbstract;
 use ReflectionMethod;
 
-/**
- * @since Class available since Release 1.0.0
- */
 class Wizard
 {
     /**
