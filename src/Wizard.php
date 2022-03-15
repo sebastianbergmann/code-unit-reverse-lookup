@@ -38,13 +38,7 @@ class Wizard
      */
     private array $processedFunctions = [];
 
-    /**
-     * @param string $filename
-     * @param int    $lineNumber
-     *
-     * @return string
-     */
-    public function lookup($filename, $lineNumber)
+    public function lookup(string $filename, int $lineNumber): string
     {
         if (!isset($this->lookupTable[$filename][$lineNumber])) {
             $this->updateLookupTable();
