@@ -70,9 +70,7 @@ class Wizard
                 continue;
             }
 
-            $reflector = new ReflectionClass($classOrTrait);
-
-            foreach ($reflector->getMethods() as $method) {
+            foreach ((new ReflectionClass($classOrTrait))->getMethods() as $method) {
                 $this->processFunctionOrMethod($method);
             }
 
