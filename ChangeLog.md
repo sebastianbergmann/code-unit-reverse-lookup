@@ -38,7 +38,7 @@ All notable changes to `sebastianbergmann/code-unit-reverse-lookup` are document
 
 * Initial release
 
-[3.0.0]: https://github.com/sebastianbergmann/code-unit-reverse-lookup/compare/2.0.3...main
+[3.0.0]: https://github.com/sebastianbergmann/code-unit-reverse-lookup/compare/2.0.3...3.0.0
 [2.0.3]: https://github.com/sebastianbergmann/code-unit-reverse-lookup/compare/2.0.2...2.0.3
 [2.0.2]: https://github.com/sebastianbergmann/code-unit-reverse-lookup/compare/2.0.1...2.0.2
 [2.0.1]: https://github.com/sebastianbergmann/code-unit-reverse-lookup/compare/2.0.0...2.0.1
