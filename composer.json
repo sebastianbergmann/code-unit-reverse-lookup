@@ -9,6 +9,10 @@
             "email": "sebastian@phpunit.de"
         }
     ],
+    "support": {
+        "issues": "https://github.com/sebastianbergmann/code-unit-reverse-lookup/issues",
+        "security": "https://github.com/sebastianbergmann/code-unit-reverse-lookup/security/policy"
+    },
     "config": {
         "platform": {
             "php": "8.1.0"
