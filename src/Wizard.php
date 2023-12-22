@@ -21,7 +21,7 @@ use ReflectionFunction;
 use ReflectionFunctionAbstract;
 use ReflectionMethod;
 
-class Wizard
+final class Wizard
 {
     /**
      * @psalm-var array<string,array<int,string>>
