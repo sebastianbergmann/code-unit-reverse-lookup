@@ -62,7 +62,6 @@ final class Wizard
         $classes = get_declared_classes();
         $traits  = get_declared_traits();
 
-        /* @noinspection PhpConditionAlreadyCheckedInspection */
         assert(is_array($traits));
 
         foreach (array_merge($classes, $traits) as $classOrTrait) {
