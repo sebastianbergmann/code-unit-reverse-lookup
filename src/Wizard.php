@@ -11,11 +11,14 @@ namespace SebastianBergmann\CodeUnitReverseLookup;
 
 use function array_merge;
 use function assert;
+use function class_exists;
+use function function_exists;
 use function get_declared_classes;
 use function get_declared_traits;
 use function get_defined_functions;
 use function is_array;
 use function range;
+use function trait_exists;
 use ReflectionClass;
 use ReflectionFunction;
 use ReflectionFunctionAbstract;
