@@ -65,6 +65,8 @@ final class Wizard
         assert(is_array($traits));
 
         foreach (array_merge($classes, $traits) as $classOrTrait) {
+            assert(class_exists($classOrTrait) || trait_exists($classOrTrait));
+
             if (isset($this->processedClasses[$classOrTrait])) {
                 continue;
             }
@@ -80,6 +82,8 @@ final class Wizard
     private function processFunctions(): void
     {
         foreach (get_defined_functions()['user'] as $function) {
+            assert(function_exists($function));
+
             if (isset($this->processedFunctions[$function])) {
                 continue;
             }
