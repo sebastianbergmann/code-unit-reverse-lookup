@@ -31,8 +31,8 @@ final class WizardTest extends TestCase
             'Foo::method',
             $this->wizard->lookup(
                 __DIR__ . '/_fixture/Foo.php',
-                12
-            )
+                12,
+            ),
         );
 
         return $this->wizard;
@@ -47,8 +47,8 @@ final class WizardTest extends TestCase
             'Bar::method',
             $wizard->lookup(
                 __DIR__ . '/_fixture/Bar.php',
-                12
-            )
+                12,
+            ),
         );
     }
 
@@ -56,7 +56,7 @@ final class WizardTest extends TestCase
     {
         $this->assertEquals(
             'file.php:1',
-            $this->wizard->lookup('file.php', 1)
+            $this->wizard->lookup('file.php', 1),
         );
     }
 }
