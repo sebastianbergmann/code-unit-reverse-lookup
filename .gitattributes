@@ -2,10 +2,11 @@
 /.gitignore     export-ignore
 /.github        export-ignore
 /.phive         export-ignore
+/.psalm         export-ignore
+/build          export-ignore
 /.php-cs-fixer.dist.php   export-ignore
 /build.xml      export-ignore
 /phpunit.xml    export-ignore
-/psalm.xml      export-ignore
 /tests          export-ignore
 /tools          export-ignore
 /tools/*        binary
