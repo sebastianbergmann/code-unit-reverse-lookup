@@ -23,7 +23,6 @@ use function range;
 use function trait_exists;
 use ReflectionClass;
 use ReflectionFunction;
-use ReflectionFunctionAbstract;
 use ReflectionMethod;
 
 final class Wizard
@@ -99,7 +98,7 @@ final class Wizard
         }
     }
 
-    private function processFunctionOrMethod(ReflectionFunctionAbstract $functionOrMethod): void
+    private function processFunctionOrMethod(ReflectionFunction|ReflectionMethod $functionOrMethod): void
     {
         if ($functionOrMethod->isInternal()) {
             return;
