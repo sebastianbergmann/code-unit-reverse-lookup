@@ -17,6 +17,8 @@ use function get_declared_classes;
 use function get_declared_traits;
 use function get_defined_functions;
 use function is_array;
+use function is_int;
+use function is_string;
 use function range;
 use function trait_exists;
 use ReflectionClass;
@@ -109,12 +111,23 @@ final class Wizard
             $name = $functionOrMethod->getDeclaringClass()->getName() . '::' . $name;
         }
 
-        if (!isset($this->lookupTable[$functionOrMethod->getFileName()])) {
-            $this->lookupTable[$functionOrMethod->getFileName()] = [];
+        $fileName = $functionOrMethod->getFileName();
+
+        assert(is_string($fileName));
+
+        if (!isset($this->lookupTable[$fileName])) {
+            $this->lookupTable[$fileName] = [];
         }
 
-        foreach (range($functionOrMethod->getStartLine(), $functionOrMethod->getEndLine()) as $line) {
-            $this->lookupTable[$functionOrMethod->getFileName()][$line] = $name;
+        $startLine = $functionOrMethod->getStartLine();
+        $endLine   = $functionOrMethod->getEndLine();
+
+        assert(is_int($startLine));
+        assert(is_int($endLine));
+        assert($endLine >= $startLine);
+
+        foreach (range($startLine, $endLine) as $line) {
+            $this->lookupTable[$fileName][$line] = $name;
         }
     }
 }
