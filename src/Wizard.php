@@ -27,17 +27,17 @@ use ReflectionMethod;
 final class Wizard
 {
     /**
-     * @psalm-var array<string,array<int,string>>
+     * @var array<string, array<int, string>>
      */
     private array $lookupTable = [];
 
     /**
-     * @psalm-var array<class-string,true>
+     * @var array<class-string, true>
      */
     private array $processedClasses = [];
 
     /**
-     * @psalm-var array<string,true>
+     * @var array<string, true>
      */
     private array $processedFunctions = [];
 
