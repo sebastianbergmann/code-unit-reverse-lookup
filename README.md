@@ -1,4 +1,4 @@
-[![Latest Stable Version](https://poser.pugx.org/sebastian/code-unit-reverse-lookup/v/stable.png)](https://packagist.org/packages/sebastian/code-unit-reverse-lookup)
+[![Latest Stable Version](https://poser.pugx.org/sebastian/code-unit-reverse-lookup/v)](https://packagist.org/packages/sebastian/code-unit-reverse-lookup)
 [![CI Status](https://github.com/sebastianbergmann/code-unit-reverse-lookup/workflows/CI/badge.svg)](https://github.com/sebastianbergmann/code-unit-reverse-lookup/actions)
 [![codecov](https://codecov.io/gh/sebastianbergmann/code-unit-reverse-lookup/branch/main/graph/badge.svg)](https://codecov.io/gh/sebastianbergmann/code-unit-reverse-lookup)
 
